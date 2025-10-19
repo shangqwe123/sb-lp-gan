@@ -1,0 +1,43 @@
+inherit: 'default_dataset.yml'
+
+run_name: 'MISB'
+
+dataset: 'farfield'
+
+generator_backbone: 'ncsnpp_base'
+discriminator_backbone: 'ncsnpp_base'
+
+discriminator_training_strategy: 'none'
+discriminator_loss_weight: 0
+beta: 2.0e-2
+bridge_type: 'FM' #gmax,VP,VE,FM
+method: 'FM'
+condition: 'y'
+loss_weight_type: 'constant'
+
+learning_rate: 1.0e-4
+batch_size: 16
+evaluate_batch_size: 8
+patience: 20
+seed: 10
+
+num_epoch: 1000
+ema_rate: 0.999
+optimizer: 'Adam'
+num_workers: 2
+sample_rate: 16000
+
+t_min: 1.0e-4
+t_max: 1
+gradient_accumulation_steps: 1
+
+logging_per_step: 10
+
+run_dir: 'runs'
+output_dir: 'results'
+
+enable_mel_loss: false
+enable_gan_loss: false
+enable_phase_loss: false
+enable_fm_target: true
+fix_step: true

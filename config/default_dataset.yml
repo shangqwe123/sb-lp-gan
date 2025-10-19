@@ -1,0 +1,7 @@
+inherit: 'data_representation.yml'
+
+datasets:
+  voicebank: '/data/SpeechEnhancement/VoiceBank+DEMAND/'
+  timit+wham: '/data/SpeechEnhancement/TIMIT+WHAM/'
+  dns: 'dataset'
+  farfield: 'farfield'

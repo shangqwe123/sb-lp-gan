@@ -1,0 +1,43 @@
+inherit: 'default_dataset.yml'
+
+run_name: 'MISB'
+
+dataset: 'dns'
+
+generator_backbone: 'apnet_bwe_model'
+discriminator_backbone: 'apnet_bwe_model'
+
+discriminator_training_strategy: 'collaborative' #frozen_discriminator
+discriminator_loss_weight: 0.0
+beta: 2.0e-2
+bridge_type: 'gmax' #gmax,VP,VE,FM
+method: 'SB'
+condition: 'both'
+loss_weight_type: 'constant'
+
+learning_rate: 1.0e-4
+batch_size: 12
+evaluate_batch_size: 8
+patience: 20
+seed: 10
+
+num_epoch: 1000
+ema_rate: 0.999
+optimizer: 'Adam'
+num_workers: 2
+sample_rate: 16000
+
+t_min: 1.0e-4
+t_max: 1
+gradient_accumulation_steps: 1
+
+logging_per_step: 10
+
+run_dir: 'runs'
+output_dir: 'results'
+
+enable_mel_loss: false
+enable_gan_loss: false
+enable_phase_loss: false
+enable_fm_target: false
+fix_step: true
