@@ -12,18 +12,6 @@ This paper introduces a novel speech enhancement framework that integrates learn
 - **Resource-Constrained Performance**: Demonstrates robust performance even in resource-constrained environments, with the nano-sized model (0.04M parameters) delivering competitive results
 - **State-of-the-Art Results**: Outperforms state-of-the-art approaches across various metrics, including OVRL, SIG, BAK, and P808.MOS
 
-## Authors
-
-- Zengqiang Shang¹
-- Biao Liu¹,²
-- Mou Wang³
-- Xin Liu³
-- Pengyuan Zhang*¹,²
-
-¹Laboratory of Speech and Intelligent Information Processing, Institute of Acoustics, CAS, China
-²University of Chinese Academy of Sciences, Beijing, China
-³Hardware Engineering System, OPPO, Beijing, China
-
 # Installation
 
 - Create a new virtual environment with `Python >= 3.8`.
