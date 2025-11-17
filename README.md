@@ -53,7 +53,7 @@ The training process involves two main components: the learnable prior module an
 To pre-train the discriminator, run
 
 ```bash
-torchrun --nproc_per_node=4 train_discriminator.py --discriminator_backbone <choosed_backbone> --dataset <target_dataset> --gpus 0,1,2,3 
+torchrun --nproc_per_node=4 train_discriminator.py --discriminator_backbone <choosed_backbone> --dataset <target_dataset> --gpus 0,1,2,3 --no_mean_inverting
 ```
 
 To train the complete model with learnable prior and Schrödinger Bridge GAN, run
